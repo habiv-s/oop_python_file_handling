@@ -5,7 +5,9 @@ class PowerProcessor:
         self.cubes = []
 
     def process_numbers(self):
+        """Reads integers from the source file and applies square/cube logic."""
         pass
 
     def save_results(self):
+        """Writes the transformed results into double.txt and triple.txt."""
         pass
