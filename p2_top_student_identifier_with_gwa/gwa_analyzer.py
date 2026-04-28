@@ -1,0 +1,2 @@
+class GwaAnalyzer:
+    pass
