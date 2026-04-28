@@ -30,7 +30,8 @@ class PowerProcessor:
 
     def calculate_statistics(self):
         """Calculates counts and averages."""
-        pass
+        squares_count = len(self.squares)
+        cubes_count = len(self.cubes)
 
     def get_report_template(self, square_count, cube_count, square_average, cube_average):
         """Defines the visual style of the report."""
