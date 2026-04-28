@@ -17,6 +17,8 @@ class PowerProcessor:
     def save_results(self):
         """Writes the transformed results into double.txt and triple.txt."""
         with open("double.txt", 'w') as double_file:
-            pass
+            for square in self.squares:
+                double_file.write(f"{square}\n")
         with open("triple.txt", 'w') as triple_file:
-            pass
+            for cube in self.cubes:
+                triple_file.write(f"{cube}\n")
