@@ -30,4 +30,5 @@ class NumberSorter:
 
     def generate_audit(self):
         """Produces a comprehensive formal audit including range and averages."""
-        pass
+        all_numbers = self.even_list + self.odd_list
+        total_count = len(all_numbers)
