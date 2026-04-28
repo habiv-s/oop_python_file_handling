@@ -1,5 +1,8 @@
 from datetime import datetime
 
+from practice_python_programs.lstrip_same_functionality import user_input
+
+
 class LifeRecorder:
     def __init__(self, filename="mylife.txt"):
         self.filename = filename
@@ -12,4 +15,5 @@ class LifeRecorder:
         """Writes interactive user input into a file with timestamps."""
         print(f"{self.purple}--- Welcome to your Personal Diary ---{self.reset}")
         with open(self.filename, 'a') as file:
-            pass
+            while True:
+                user_input = input(f"{self.yellow}Enter line: {self.reset}")
