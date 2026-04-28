@@ -5,3 +5,6 @@ class LifeRecorder:
         self.cyan = "\033[96m"
         self.yellow = "\033[93m"
         self.reset = "\033[0m"
+
+    def record_lines(self):
+        pass
