@@ -17,3 +17,9 @@ class LifeRecorder:
         with open(self.filename, 'a') as file:
             while True:
                 user_input = input(f"{self.yellow}Enter line: {self.reset}")
+
+                choice = input(f"{self.cyan}Are there more lines y/n? {self.reset}").lower().strip()
+
+                if choice == 'n':
+                    print(f"\n{self.purple}Entry saved.{self.reset}")
+                    break
