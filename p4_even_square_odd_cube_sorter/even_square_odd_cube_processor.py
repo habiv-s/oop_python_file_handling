@@ -47,7 +47,6 @@ class PowerProcessor:
     def get_report_template(self, squares_count, cubes_count, squares_average, cubes_average):
         """Defines the visual style of the report."""
         now = datetime.now().strftime("%A, %B %d, %Y")
-
         report = (
             f"{'=' * 34}\n"
             f"MATH TRANSFORMATION REPORT\n"
@@ -59,7 +58,7 @@ class PowerProcessor:
             f"Cubes Average: {cubes_average:.2f}\n"
             f"{'=' * 34}\n"
         )
+        return report
 
     def generate_report(self):
         """Saves the formatted report to a file."""
-        pass
