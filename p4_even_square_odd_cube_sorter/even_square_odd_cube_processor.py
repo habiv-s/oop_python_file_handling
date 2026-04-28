@@ -13,6 +13,7 @@ class PowerProcessor:
                     self.squares.append(integer ** 2)
                 else:
                     self.cubes.append(integer ** 3)
+        print("Even and Odd numbers identified. Squares and Cubes calculation complete!")
 
     def save_results(self):
         """Writes the transformed results into double.txt and triple.txt."""
@@ -22,3 +23,4 @@ class PowerProcessor:
         with open("triple.txt", 'w') as triple_file:
             for cube in self.cubes:
                 triple_file.write(f"{cube}\n")
+        print("Results saved to double.txt and triple.txt.")
