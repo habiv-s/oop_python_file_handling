@@ -16,4 +16,9 @@ class GwaAnalyzer:
 
     def display_result(self):
         """Logic to print the top student's info."""
-        pass
+        if self.top_student:
+            print("\nTOP STUDENT IDENTIFIED")
+            print(f"Name: {self.top_student}")
+            print(f"GWA: {self.highest_gwa}")
+        else:
+            print("No student data available to display.")
