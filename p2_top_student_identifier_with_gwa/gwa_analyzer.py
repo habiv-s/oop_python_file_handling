@@ -30,3 +30,11 @@ class GwaAnalyzer:
                 print(f" - {student}")
         else:
             print("No student data available to display.")
+
+    def issue_digital_certificates(self):
+        """Generates a formal digital certificate for the top performer(s)."""
+        pass
+
+    def generate_honors_report(self):
+        """Categorizes students into academic honor levels."""
+        pass
