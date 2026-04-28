@@ -27,3 +27,15 @@ class PowerProcessor:
             for cube in self.cubes:
                 triple_file.write(f"{cube}\n")
         print("Results saved to double.txt and triple.txt.")
+
+    def calculate_statistics(self):
+        """Calculates counts and averages."""
+        pass
+
+    def get_report_template(self, square_count, cube_count, square_average, cube_average):
+        """Defines the visual style of the report."""
+        pass
+
+    def generate_report(self):
+        """Saves the formatted report to a file."""
+        pass
