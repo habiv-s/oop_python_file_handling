@@ -44,26 +44,26 @@ class NumberSorter:
         maximum_odd = max(self.odd_list) if self.odd_list else 0
 
         report = f"""
-        ║{"═" * 54}║
-        ║{"COMPREHENSIVE DATA VALIDATION AUDIT".center(54)}║
-        ║{"═" * 54}║
+        ║{"═" * 65}║
+        ║{"COMPREHENSIVE DATA VALIDATION AUDIT".center(65)}║
+        ║{"═" * 65}║
           SOURCE FILE        : numbers.txt
           TOTAL RECORDS      : {total_count} integers
-        {"─" * 56}
+        {"─" * 67}
           [GROUP A: EVEN NUMBERS]
           - Count            : {len(self.even_list)}
           - Value Range      : {minimum_even} to {maximum_even}
           - Aggregate Sum    : {sum_even}
           - Calculated Mean  : {average_even:.2f}
-        {"─" * 56}
+        {"─" * 67}
           [GROUP B: ODD NUMBERS]
           - Count            : {len(self.odd_list)}
           - Value Range      : {minimum_odd} to {maximum_odd}
           - Aggregate Sum    : {sum_odd}
           - Calculated Mean  : {average_odd:.2f}
-        {"─" * 56}
+        {"─" * 67}
           VERIFICATION       : Integrity check passed.
           EXPORT STATUS      : Files 'even.txt' & 'odd.txt' synchronized.
-        ╚{"═" * 54}╝
+        ╚{"═" * 65}╝
         """
         print(report)
