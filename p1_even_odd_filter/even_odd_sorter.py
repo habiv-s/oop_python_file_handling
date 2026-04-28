@@ -9,6 +9,10 @@ def sort_numbers(self):
     with open('numbers.txt', 'r') as numbers_file:
         for numbers in numbers_file:
             number = int(numbers.strip())
+            if number % 2 == 0:
+                self.even_list.append(number)
+            else:
+                self.odd_list.append(number)
 
 def save_to_files(self):
     """Creates even.txt and odd.txt from the sorted lists."""
