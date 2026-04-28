@@ -6,14 +6,17 @@ class PowerProcessor:
 
     def process_numbers(self):
         """Reads integers from the source file and applies square/cube logic."""
-        with open(self.filename, 'r') as file:
-            for integers in file:
-                integer = int(integers.strip())
-                if integer % 2 == 0:
-                    self.squares.append(integer ** 2)
-                else:
-                    self.cubes.append(integer ** 3)
-        print("Even and Odd numbers identified. Squares and Cubes calculation complete!")
+        try:
+            with open(self.filename, 'r') as file:
+                for integers in file:
+                    integer = int(integers.strip())
+                    if integer % 2 == 0:
+                        self.squares.append(integer ** 2)
+                    else:
+                        self.cubes.append(integer ** 3)
+            print("Even and Odd numbers identified. Squares and Cubes calculation complete!")
+        except FileNotFoundError:
+            print("Sorry, the integers text file was not found.")
 
     def save_results(self):
         """Writes the transformed results into double.txt and triple.txt."""
