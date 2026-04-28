@@ -7,4 +7,5 @@ class LifeRecorder:
         self.reset = "\033[0m"
 
     def record_lines(self):
+        """Writes interactive user input into a file with timestamps."""
         pass
