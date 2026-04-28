@@ -64,3 +64,13 @@ class GwaAnalyzer:
         first_honors = []
         second_honors = []
         total_students = 0
+
+        with open(self.filename, 'r') as file:
+            for line in file:
+                student_name, student_gwa = line.strip().split(',')
+                student_gwa = float(student_gwa)
+                total_students += 1
+                if 1.00 <= student_gwa <= 1.25:
+                    first_honors.append(student_name)
+                elif 1.26 <= student_gwa <= 1.50:
+                    second_honors.append(student_name)
