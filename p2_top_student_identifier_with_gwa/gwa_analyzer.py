@@ -36,6 +36,29 @@ class GwaAnalyzer:
         from datetime import datetime
         now = datetime.now().strftime("%B %d, %Y")
 
+        if not self.top_student:
+            return
+
+        for student in self.top_student:
+            certificate = f"""
+            ╔{"═" * 60}╗
+            ║{"CERTIFICATE OF ACADEMIC EXCELLENCE".center(60)}║
+            ╠{"═" * 60}╣
+            ║{" ".center(60)}║
+            ║{"This is to certify that".center(60)}║
+            ║{student.upper().center(60)}║
+            ║{" ".center(60)}║
+            ║{"has achieved the HIGHEST GENERAL WEIGHTED AVERAGE".center(60)}║
+            ║{f"with a remarkable grade of {self.highest_gwa}".center(60)}║
+            ║{" ".center(60)}║
+            ║{"─" * 40:^60}║
+            ║{now.center(60)}║
+            ║{"Date Issued".center(60)}║
+            ╚{"═" * 60}╝
+                    """
+            print(certificate)
+        print(f"Congratulations to our top {len(self.top_student)} performer(s)!")
+
     def generate_honors_report(self):
         """Categorizes students into academic honor levels."""
         pass
