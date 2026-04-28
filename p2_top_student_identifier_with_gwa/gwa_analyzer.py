@@ -13,6 +13,7 @@ class GwaAnalyzer:
                 if self.top_student is None or student_gwa < self.highest_gwa:
                     self.highest_gwa = student_gwa
                     self.top_student = student_name
+        print("Successfully processed student records.")
 
     def display_result(self):
         """Logic to print the top student's info."""
