@@ -44,9 +44,21 @@ class PowerProcessor:
             cubes_average = 0
         return squares_count, cubes_count, squares_average, cubes_average
 
-    def get_report_template(self, square_count, cube_count, square_average, cube_average):
+    def get_report_template(self, squares_count, cubes_count, squares_average, cubes_average):
         """Defines the visual style of the report."""
         now = datetime.now().strftime("%A, %B %d, %Y")
+
+        report = (
+            f"{'=' * 34}\n"
+            f"MATH TRANSFORMATION REPORT\n"
+            f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
+            f"{'-' * 34}\n"
+            f"Even Numbers Squared: {squares_count}\n"
+            f"Squares Average: {squares_average:.2f}\n\n"
+            f"Odd Numbers Cubed: {cubes_count}\n"
+            f"Cubes Average: {cubes_average:.2f}\n"
+            f"{'=' * 34}\n"
+        )
 
     def generate_report(self):
         """Saves the formatted report to a file."""
