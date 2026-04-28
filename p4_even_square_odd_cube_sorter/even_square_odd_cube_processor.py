@@ -7,7 +7,8 @@ class PowerProcessor:
     def process_numbers(self):
         """Reads integers from the source file and applies square/cube logic."""
         with open(self.filename, 'r') as file:
-            pass
+            for integers in file:
+                integer = int(integers.strip())
 
     def save_results(self):
         """Writes the transformed results into double.txt and triple.txt."""
