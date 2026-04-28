@@ -14,27 +14,30 @@ class LifeRecorder:
     def record_lines(self):
         """Writes interactive user input into a file with timestamps."""
         print(f"{self.purple}--- Welcome to your Personal Diary ---{self.reset}")
-        with open(self.filename, 'a') as file:
-            while True:
-                user_input = input(f"{self.yellow}Enter line: {self.reset}")
+        try:
+            with open(self.filename, 'a') as file:
+                while True:
+                    user_input = input(f"{self.yellow}Enter line: {self.reset}")
 
-                now = datetime.now()
-                date_str = now.strftime("%A, %B %d, %Y")
-                time_str = now.strftime("%I:%M %p")
+                    now = datetime.now()
+                    date_str = now.strftime("%A, %B %d, %Y")
+                    time_str = now.strftime("%I:%M %p")
 
-                entry_format = (
-                    f"{'=' * 50}\n"
-                    f"DATE : {date_str}\n"
-                    f"TIME : {time_str}\n"
-                    f"{'-' * 50}\n"
-                    f"ENTRY: {user_input}\n"
-                    f"{'=' * 50}\n\n"
-                )
+                    entry_format = (
+                        f"{'=' * 50}\n"
+                        f"DATE : {date_str}\n"
+                        f"TIME : {time_str}\n"
+                        f"{'-' * 50}\n"
+                        f"ENTRY: {user_input}\n"
+                        f"{'=' * 50}\n\n"
+                    )
 
-                file.write(entry_format)
+                    file.write(entry_format)
 
-                choice = input(f"{self.cyan}Are there more lines y/n? {self.reset}").lower().strip()
+                    choice = input(f"{self.cyan}Are there more lines y/n? {self.reset}").lower().strip()
 
-                if choice == 'n':
-                    print(f"\n{self.purple}Entry saved.{self.reset}")
-                    break
+                    if choice == 'n':
+                        print(f"\n{self.purple}Entry saved.{self.reset}")
+                        break
+        except IOError:
+            print("Error: Could not write to the file.")
