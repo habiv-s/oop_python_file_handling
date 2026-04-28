@@ -61,16 +61,44 @@ class GwaAnalyzer:
 
     def generate_honors_report(self):
         """Categorizes students into academic honor levels."""
-        first_honors = []
-        second_honors = []
-        total_students = 0
+        self.first_honors = []
+        self.second_honors = []
+        self.total_students = 0
 
         with open(self.filename, 'r') as file:
             for line in file:
                 student_name, student_gwa = line.strip().split(',')
                 student_gwa = float(student_gwa)
-                total_students += 1
+                self.total_students += 1
                 if 1.00 <= student_gwa <= 1.25:
-                    first_honors.append(student_name)
+                    self.first_honors.append(student_name)
                 elif 1.26 <= student_gwa <= 1.50:
-                    second_honors.append(student_name)
+                    self.second_honors.append(student_name)
+
+        centered_first = "\n".join(
+            [name.center(56) for name in self.first_honors]) if self.first_honors else "None".center(56)
+        centered_second = "\n".join(
+            [name.center(56) for name in self.second_honors]) if self.second_honors else "None".center(56)
+        centered_tops = "\n".join([name.center(56) for name in self.top_student])
+
+        report = f"""
+        ╔{"═" * 54}╗
+          ACADEMIC YEAR      : 2025-2026
+          RECORDS EVALUATED  : {self.total_students} Students
+        {"─" * 56}
+          [CATEGORY 1: FIRST HONORS (1.00 - 1.25)]
+          - Qualified count  : {len(self.first_honors)}
+          - Members          :
+          {centered_first}
+        {"─" * 56}
+          [CATEGORY 2: SECOND HONORS (1.26 - 1.50)]
+          - Qualified count  : {len(self.second_honors)}
+          - Members          : 
+          {centered_second}
+        {"─" * 56}
+          TOP PERFORMER(S)   : 
+          {centered_tops}
+          ESTABLISHED GWA    : {self.highest_gwa}
+        ╚{"═" * 54}╝
+        """
+        print(report)
