@@ -33,7 +33,8 @@ class GwaAnalyzer:
 
     def issue_digital_certificates(self):
         """Generates a formal digital certificate for the top performer(s)."""
-        pass
+        from datetime import datetime
+        now = datetime.now().strftime("%B %d, %Y")
 
     def generate_honors_report(self):
         """Categorizes students into academic honor levels."""
