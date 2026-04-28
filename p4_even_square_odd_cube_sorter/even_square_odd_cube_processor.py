@@ -3,3 +3,9 @@ class PowerProcessor:
         self.filename = filename
         self.squares = []
         self.cubes = []
+
+    def process_numbers(self):
+        pass
+
+    def save_results(self):
+        pass
