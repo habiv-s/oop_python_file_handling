@@ -1,8 +1,5 @@
 from datetime import datetime
 
-from practice_python_programs.lstrip_same_functionality import user_input
-
-
 class LifeRecorder:
     def __init__(self, filename="mylife.txt"):
         self.filename = filename
