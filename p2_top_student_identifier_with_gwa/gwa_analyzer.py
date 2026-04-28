@@ -10,7 +10,7 @@ class GwaAnalyzer:
             for line in file:
                 student_name, student_gwa = line.strip().split(',')
                 student_gwa = float(student_gwa)
-                if self.top_student is None or gwa < self.highest_gwa:
+                if self.top_student is None or student_gwa < self.highest_gwa:
                     self.highest_gwa = student_gwa
                     self.top_student = student_name
 
