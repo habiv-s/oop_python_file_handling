@@ -17,6 +17,8 @@ def sort_numbers(self):
 def save_to_files(self):
     """Creates even.txt and odd.txt from the sorted lists."""
     with open('even.txt', 'w') as even_numbers_file:
-        pass
+        for numbers in self.even_list:
+            even_numbers_file.write(f"{numbers}\n")
     with open('odd.txt', 'w') as odd_numbers_file:
-        pass
+        for numbers in self.odd_list:
+            odd_numbers_file.write(f"{numbers}\n")
