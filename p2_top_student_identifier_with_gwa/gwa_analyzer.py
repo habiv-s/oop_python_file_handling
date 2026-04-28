@@ -6,7 +6,8 @@ class GwaAnalyzer:
 
     def find_top_student(self):
         """Logic to read file and find the highest GWA."""
-        pass
+        with open(self.filename, 'r') as file:
+            pass
 
     def display_result(self):
         """Logic to print the top student's info."""
