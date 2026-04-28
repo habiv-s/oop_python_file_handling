@@ -1,7 +1,7 @@
 class GwaAnalyzer:
     def __init__(self, filename):
         self.filename = filename
-        self.top_student = None
+        self.top_student = []
         self.highest_gwa = 0.0
 
     def find_top_student(self):
