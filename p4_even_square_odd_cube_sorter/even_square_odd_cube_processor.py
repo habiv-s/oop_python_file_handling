@@ -62,3 +62,5 @@ class PowerProcessor:
 
     def generate_report(self):
         """Saves the formatted report to a file."""
+        squares_count, cubes_count, squares_average, cubes_average = self.calculate_statistics()
+        final_output = self.get_report_template(squares_count, cubes_count, squares_average, cubes_average)
