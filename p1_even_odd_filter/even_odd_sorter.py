@@ -32,3 +32,13 @@ class NumberSorter:
         """Produces a comprehensive formal audit including range and averages."""
         all_numbers = self.even_list + self.odd_list
         total_count = len(all_numbers)
+
+        sum_even = sum(self.even_list)
+        average_even = sum_even / len(self.even_list) if self.even_list else 0
+        minimum_even = min(self.even_list) if self.even_list else 0
+        maximum_even = max(self.even_list) if self.even_list else 0
+
+        sum_odd = sum(self.odd_list)
+        average_odd = sum_odd / len(self.odd_list) if self.odd_list else 0
+        minimum_odd = min(self.odd_list) if self.odd_list else 0
+        maximum_odd = max(self.odd_list) if self.odd_list else 0
