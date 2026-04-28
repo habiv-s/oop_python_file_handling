@@ -6,7 +6,8 @@ class NumberSorter:
 
 def sort_numbers(self):
     """Reads integers and categorizes them into even or odd lists."""
-    pass
+    with open('numbers.txt', 'r') as numbers_file:
+        pass
 
 def save_to_files(self):
     """Creates even.txt and odd.txt from the sorted lists."""
