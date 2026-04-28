@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class PowerProcessor:
     def __init__(self, filename):
         self.filename = filename
@@ -44,7 +46,7 @@ class PowerProcessor:
 
     def get_report_template(self, square_count, cube_count, square_average, cube_average):
         """Defines the visual style of the report."""
-        pass
+        now = datetime.now().strftime("%A, %B %d, %Y")
 
     def generate_report(self):
         """Saves the formatted report to a file."""
