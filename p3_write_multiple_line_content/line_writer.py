@@ -10,4 +10,6 @@ class LifeRecorder:
 
     def record_lines(self):
         """Writes interactive user input into a file with timestamps."""
-        pass
+        print(f"{self.purple}--- Welcome to your Personal Diary ---{self.reset}")
+        with open(self.filename, 'a') as file:
+            pass
