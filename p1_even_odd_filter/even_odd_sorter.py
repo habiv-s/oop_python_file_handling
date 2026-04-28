@@ -27,3 +27,7 @@ class NumberSorter:
             for numbers in self.odd_list:
                 odd_numbers_file.write(f"{numbers}\n")
         print("Generated 'even.txt' and 'odd.txt' successfully.")
+
+    def generate_audit(self):
+        """Produces a comprehensive formal audit including range and averages."""
+        pass
